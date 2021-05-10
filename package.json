@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Abhinav Dinesh",
+  "author": "NNP,
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/abhinavdc/cowin-pinger"
+    "url": "https://github.com/NitheeshPanicker/test_project"
   },
   "bin": {
     "cowin-pinger": "./app.js"
