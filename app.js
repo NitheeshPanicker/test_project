@@ -53,6 +53,7 @@ function checkParams() {
             console.log(`District ID= ${params.districtId}`);
             console.log(`Time interval= ${params.interval} minutes (default is 15)`);
             console.log(`Appointment Count= ${params.appointmentsListLimit} (default is 2)`);
+            console.log(`Date=${params.date}`);
             if (params.hook && params.key) {
                 console.log(`IFTTT API Key= ${params.key || "not configured"}`);
                 console.log(`IFTTT Hook Name= ${params.hook || "not configured"}`);
@@ -74,7 +75,7 @@ function scheduleCowinPinger(params) {
         pingCount += 1;
         pingCowin(params);
         console.log("Ping Count - ", pingCount);
-    }, params.interval * 60000);
+    }, 3000);
 }
 
 function pingCowin({ key, hook, age, districtId, appointmentsListLimit, date }) {
@@ -83,6 +84,7 @@ function pingCowin({ key, hook, age, districtId, appointmentsListLimit, date }) 
         let isSlotAvailable = false;
         let dataOfSlot = "";
         let appointmentsAvailableCount = 0;
+        console.log("FucntionStarted");
         if (centers.length) {
             centers.forEach(center => {
                 center.sessions.forEach((session => {
